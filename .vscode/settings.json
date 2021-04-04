@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/b8061812-dea0-4cf3-8b1d-9fd6cc2746c1/resourceGroups/TlabAPI/providers/Microsoft.Web/sites/TlabAPI-HACKDAY2021",
-    "appService.deploySubpath": "."
-}
