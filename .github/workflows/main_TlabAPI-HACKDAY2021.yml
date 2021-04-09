@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'TlabAPI-HACKDAY2021'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_e8269a05e0214dabaded2b5ee9d5ed8b }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_8dce8fbc2b5b499199172501c3bc6bee }}
