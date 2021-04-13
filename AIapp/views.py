@@ -449,7 +449,12 @@ class AILearning(APIView):
         torch.save(attn_decoder.to('cpu').state_dict(), att_decoder_model_path)
 
         result = {
-                    'match':len(predict_df.query('judge == "O"')) / len(predict_df),
+                    'vocabulary':len(char2id),
+                    'input data':len(input_data),
+                    'train data':len(input_data) * 0.8,
+                    'epoch time':epoch,
+                    'total loss':epoch_loss,
+                    'match ratio':len(predict_df.query('judge == "O"')) / len(predict_df),
                 }
         return JsonResponse(result)
 
