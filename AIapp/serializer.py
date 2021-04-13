@@ -8,3 +8,7 @@ class AIchatSerializer(serializers.ModelSerializer):
         model = AIchat
         fields = '__all__'
 
+class AILearningSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LearningData
+        fields = '__all__'

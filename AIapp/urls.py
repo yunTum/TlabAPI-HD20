@@ -11,4 +11,5 @@ urlpatterns = [
     
     path('aichat/', AIchatList.as_view()),
     path('aichat/<int:pk>/', AIchatDetail.as_view()),
+    path('ailearn/', AILearning.as_view()),
     ]
