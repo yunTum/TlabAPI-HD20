@@ -6,36 +6,39 @@ This API has been used  as Backend of the Hackday2020. This repository is for de
 | api/aichat/  | Call words from AI |
 | api/ailearn/ | Tarin AI           |
 
-##api/aichat/
-###What is input? 
+## api/aichat/
+### What is input? 
 POST
-'''JSON
+```JSON
 {
   "text":"大島さん？"
 }
-'''
+```
 The vocabulary isn't perfect because of a little dataset, 
 so input data can limit only japanese and don't use alphabet or a part of number.
 
-###Output here
-'''JSON
+### Output here
+```JSON
 {
   "input":"大島さん？",
   "output":"児島だよ！"
 }
-'''
+```
 
-##api/ailearn/
-###What is input?
-'''form-data
+## api/ailearn/
+
+### What is input?
+POST
+```form-data
 {
   "epochtime":10
   "txtfile":boke_tukkomi.txt
 }
-'''
+```
 Upload data(.txt) must send from form-data, not json.
 
-###Output here
+### Output here
+```JSON
 {
     "vocabulary": 404,
     "input data": 77,
@@ -44,6 +47,7 @@ Upload data(.txt) must send from form-data, not json.
     "total loss": 995.9208223819733,
     "match ratio": 0.0
 }
+```
 If this traing succeed, created these files att_decoder_model.pth, encoder_model.pth and char2id.csv under static file.
 Train model data store in two .pth files and vocabulary data put in char2id.csv.
 The dataset is divided into 80%:traindata and 20%:testdata.  
